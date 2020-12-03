@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Lora:ital@1&family=Maitree&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Telex&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 :root {
   --primary-light: #f2f4f3;
@@ -13,7 +14,7 @@
   --purple: #564d80ff;
   --blue: #6ADCDC;
   --light-blue: #EEFBFB;
-  --logo-color: #bfcf60;
+  --logo-color: #99ac7c;
 
   /* --primary-light: #FFE187;
     --primary-dark: #2E133A;
@@ -24,10 +25,18 @@
   --font-title: "Josefin Sans", sans-serif;
   --font-subtitle: "Lora", serif;
   --font-body: "Telex", sans-serif;
+  --menu-font: 'EB Garamond', serif;
 
   --size-xl: 1024px;
   --size-tablet: 768px;
   --size-phone: 480px;
+}
+hr{
+  border-width:0;
+  color:white;
+  height:1px;
+  background-color:var(--primary-dark);
+  width: 80%;
 }
 body{
   background-color:  white;
@@ -66,7 +75,7 @@ body{
 header div.header-item{
   height: 130px;
 }
-header {
+.header {
   width: 100%;
   overflow: hidden;
   background-color: white;
@@ -83,26 +92,29 @@ header {
   left: 0;
   background-color: var(--logo-color);
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 30px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
-.sidenav div {
+.sidenav-main {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  text-transform: uppercase;
-  font-size: 25px;
-  font-family: var(--font-body);
-  color: var(--primary-dark);
+  font-size: 24px;
+  font-family: var(--menu-font);
+  color: rgb(250, 250, 250);
   display: block;
   transition: 0.3s;
   background-color: var(--logo-color);
 }
-
-/* When you mouse over the navigation links, change their color */
-.sidenav div:hover {
-  color: var(--dark-green);
+.sidenav-menu{
+  padding: 8px 8px 8px 32px;
+  font-size: 20px;
+  font-family: var(--menu-font);
+  color:rgb(236, 236, 236);
+  display: block;
+  transition: 0.3s;
+  background-color: var(--logo-color);
 }
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
@@ -110,14 +122,10 @@ header {
   padding: 0px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav div {font-size: 18px;}
-}
+
 /* Slideshow-Carousel */
 
-.mySlides {display: none}
+.mySlides {display: none;}
 img {vertical-align: middle;}
 
 
@@ -179,3 +187,9 @@ img {vertical-align: middle;}
     from {opacity: .5} 
     to {opacity: 1}
   }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav div {font-size: 18px;}
+}
