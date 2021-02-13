@@ -1,10 +1,11 @@
+
 var slideIndex = 1;
-showSlides(slideIndex);
-  
+window.onload = function() {
+  showSlides(1);
+};
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
-  
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
